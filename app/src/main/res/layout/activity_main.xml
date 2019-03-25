@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="180dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo" />
+
+    <com.jaredrummler.materialspinner.MaterialSpinner
+        android:id="@+id/spinKelas"
+        android:layout_width="330dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:elevation="12dp"
+        android:entries="@array/kelas"
+        android:hint="Kelas..."
+        android:textColorHint="#48000000" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/lvNamaSiswa"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/spinKelas"
+        android:layout_marginTop="12dp"
+        android:padding="12dp" />
+
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        app:menu_openDirection="up"
+        app:menu_labels_showShadow="true"
+        app:menu_showShadow="true"
+        app:menu_labels_textColor="#000"
+        app:menu_fab_size="normal"
+        app:menu_labels_colorNormal="#FFF"
+        app:menu_colorPressed="#BDBDBD"
+        app:menu_backgroundColor="@android:color/transparent"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_view"
+        android:backgroundTint="@color/colorAccent"
+        android:layout_marginBottom="20dp">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini"
+            app:fab_label="Task"
+            android:src="@drawable/ic_event_note_black_24dp"
+            app:fab_colorNormal="@color/colorPrimary"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/jadwal"
+            android:layout_width="wrap_content"
+            app:fab_size="mini"
+            app:fab_label="Jadwal KBM"
+            android:src="@drawable/ic_schedule_black_24dp"
+            app:fab_colorNormal="@color/colorPrimary"
+            android:layout_height="wrap_content" />
+    </com.github.clans.fab.FloatingActionMenu>
+
+</RelativeLayout>

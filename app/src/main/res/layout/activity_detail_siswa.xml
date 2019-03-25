@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailSiswaActivity">
+
+        <Toolbar
+            android:id="@+id/tool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:layout_alignParentTop="true"
+            android:minHeight="?attr/actionBarSize"
+            android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btnBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/back"
+                    android:onClick="onBack"
+                    android:background="#00FFFFFF"/>
+
+                <TextView
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_width="wrap_content"
+                    android:textSize="20dp"
+                    android:textColor="#FFF"
+                    android:layout_height="wrap_content"
+                    android:text="Cek Kegiatan"/>
+
+            </LinearLayout>
+
+        </Toolbar>
+
+
+
+    <ImageView
+        android:layout_below="@id/tool"
+        android:id="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_width="180dp"
+        android:layout_height="120dp"
+        android:src="@drawable/logo" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:layout_marginTop="1dp"
+        android:orientation="vertical">
+
+            <TextView
+                android:layout_marginHorizontal="10dp"
+                android:id="@+id/txtNamaS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Siswa"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+
+
+
+            <CheckBox
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/corner"
+                android:layout_marginLeft="16dp"
+                android:id="@+id/mandi"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="12dp"
+                android:text="Mandi" />
+
+            <CheckBox
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginLeft="16dp"
+                android:id="@+id/makan"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/corner"
+                android:text="Makan" />
+
+            <CheckBox
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="12dp"
+                android:id="@+id/gantiBaju"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/corner"
+                android:text="Ganti Baju" />
+
+            <CheckBox
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginLeft="16dp"
+                android:id="@+id/seragam"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/corner"
+                android:text="Seragam Lengkap" />
+
+            <CheckBox
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:id="@+id/sholat"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/corner"
+                android:text="Sikat Gigi" />
+
+            <CheckBox
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:id="@+id/merapihkan"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/corner"
+                android:text="Merapihkan Barang Pribadi" />
+
+        </LinearLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="57dp"
+        android:background="?attr/selectableItemBackground"
+        android:onClick="resetAll"
+        android:src="@drawable/reset" />
+</RelativeLayout>

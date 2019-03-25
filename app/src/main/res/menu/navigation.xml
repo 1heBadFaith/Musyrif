@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_daftar"
+        android:icon="@drawable/list"
+        android:title="Daftar Siswa" />
+
+    <item
+        android:id="@+id/navigation_check"
+        android:icon="@drawable/ic_schedule_black_24dp"
+        android:title="Jadwal KBM" />
+
+
+
+</menu>
